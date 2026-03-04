@@ -119,9 +119,3 @@ export {
   SelectScrollUpButton,
   SelectScrollDownButton,
 }
-
-{
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite"
-}
