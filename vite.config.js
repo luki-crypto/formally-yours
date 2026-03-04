@@ -3,12 +3,15 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    outDir: 'dist'
-  },
   esbuild: {
     loader: 'jsx',
-    include: /src\/.*|\.html$/,
+    include: /.*\.jsx?|\.html$/,
     exclude: []
+  },
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: 'index.html'
+    }
   }
 })
